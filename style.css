@@ -1,0 +1,289 @@
+.container{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.styleguide .button {margin-bottom: 10px;}
+
+.styleguide__title-h1 {font-size: 20px;font-weight: 700; margin-top: 40px; margin-bottom: 20px;text-transform: uppercase;}
+.styleguide__title-h2 {font-size: 16px;font-weight: 700; margin-bottom: 30px;}
+
+.styleguide__flex {
+	display: flex;
+}
+
+.styleguide__column {
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"] .visually-hidden,
+input[type="radio"] .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+
+/* Buttons */
+
+.button{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap;
+    min-width: 90px;
+ 
+    padding: 15px 10px;
+
+    text-transform: uppercase; 
+    color: #ffffff; 
+    font-weight: 700;
+    font-size: 20px;
+    
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: none;
+    background-color: #03c98b; 
+    border: solid 1px #03c98b;
+    box-shadow: 0 8px 20px 0 rgba(28, 30, 35, 0.1);
+
+    cursor: pointer;
+}
+
+.button:hover{background-color: #30d19e;color: #fdfdfd; border: 1px solid #30d19e;}
+.button.pressed{background-color: #08aa78; border: 1px solid #08aa78; color: #d7d7d8; box-shadow: none;}
+.button:active{background-color: #08aa78; border: 1px solid #08aa78; color: #d7d7d8; box-shadow: none;}
+.button.disabled{background-color: #dadada; border: 1px solid #dadada; box-shadow: none; cursor: default; } /*для всех кроме черных*/
+
+.m{padding: 7px 10px 8px 10px; font-size: 14px;}/*размер medium*/
+.s{padding: 4px 10px 4px 10px; font-size: 14px;}/*размер small*/
+
+/*Белые кнопки*/
+.white{background-color: #ffffff; border: 1px solid #222329; color: #222329; box-sizing: border-box; box-shadow: none;}
+.white:hover{background-color: #ffffff; border-color: #57585d; color: #494a4f;}
+.white.pressed{background-color: #d7d7d8;color: #212228; border-color: #4d4e53;}
+.white:active{background-color: #d7d7d8;color: #212228; border-color: #4d4e53;}
+.white.disabled{background-color: #dadada; box-shadow: none; border: none;color: #ffffff; cursor: default; }
+
+/*Черные кнопки*/
+.black-border{ background-color: #222329; box-sizing: border-box; border: 1px solid #ffffff;}
+
+.black{ background-color: #222329; border: 1px solid #222329; box-shadow: 0 8px 20px 0 rgba(28, 30, 35, 0.1);}
+.black:hover{background-color: #494a4f; border: 1px solid #494a4f; color: #fdfdfd;}
+.black.disabled{background-color: #bcbcbc; box-shadow: none; cursor: default; }
+.black.pressed{background-color: #212228;color: #d7d7d8; border: 1px solid #212228;}
+.black:active{background-color: #212228;color: #d7d7d8; border: 1px solid #212228;}
+
+
+
+/* Чекбоксы и радиобаттоны */
+
+
+/* type с радиобаттонами */
+
+
+.type{
+}
+
+.type__name-field{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.type__checkbox-block{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 26px;
+    padding-left: 32px;
+}
+
+.type__label{
+  position: relative;
+    margin-left: 5px;
+}
+
+
+.type__label::after{ /* радиобаттон */
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: -1px;
+  left: -51px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #747474;
+}
+
+.type__label.label-bye{
+    color: #03c98b;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 50px;
+}
+
+.type__label::before{ /* точка */
+  display: none;
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 6px;
+  left: -44px;
+  background-color: #03c98b;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.type__label.on::before{ 
+  display: block;
+}
+
+.type .label-sell{
+    color: #ff3939;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.type .ico.ico_icon_arrow_sell img{left: 0; top: -1px;}
+
+.type .ico.ico_icon_arrow_buy img{left: 0;top: -1px;}
+
+
+
+/* type с чекбоксами*/
+
+.type__label_checkbox::after{ /* чекбокс */
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -1px;
+  left: -51px;
+  background-color: #ffffff;
+  border: 1px solid #747474;
+  border-radius: 3px;
+}
+
+
+.type__label_checkbox.selected::after{ /* черный фон */
+  content: '';
+  position: absolute;
+  width: 17px;
+  height: 17px;
+
+  top: 0px;
+  left: -50px;
+
+  background-color: #222329;
+  border: none;
+  z-index: 10;
+}
+
+.type__label_checkbox::before{ /* галочка */
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 7px;
+  display: none;
+
+  top: 50%;
+  left: 15px;
+  transform: translate(-31px, -50%);
+
+  background: url("../icons/svg/icons/icon_checkbox_stuff.svg") no-repeat;
+  z-index: 100;
+  border: none;
+}
+
+.type__label_checkbox.selected::before{
+	display: block;
+}
+
+
+
+
+
+
+/* Кнопки */
+.button:hover{background-color: #30d19e;color: #fdfdfd; border: 1px solid #30d19e;}
+.button.pressed{background-color: #08aa78; border: 1px solid #08aa78; color: #d7d7d8; box-shadow: none;}
+.button:active{background-color: #08aa78; border: 1px solid #08aa78; color: #d7d7d8; box-shadow: none;}
+.button.disabled{background-color: #dadada; border: 1px solid #dadada; box-shadow: none;} /*для всех кроме черных*/
+
+.m{padding: 7px 10px 8px 10px; font-size: 14px;}/*размер medium*/
+.s{padding: 4px 10px 4px 10px; font-size: 14px;}/*размер small*/
+
+
+/*Белые кнопки*/
+
+.white{background-color: #ffffff; border: 1px solid #222329; color: #222329; box-sizing: border-box; box-shadow: none;}
+.white:hover{background-color: #ffffff; border-color: #57585d; color: #494a4f;}
+.white.pressed{background-color: #d7d7d8;color: #212228; border-color: #4d4e53;}
+.white:active{background-color: #d7d7d8;color: #212228; border-color: #4d4e53;}
+.white.disabled{background-color: #dadada; box-shadow: none; border: none;color: #ffffff;}
+
+
+/*Черные кнопки*/
+
+.black-border{ background-color: #222329; box-sizing: border-box; border: 1px solid #ffffff;}
+
+.black{ background-color: #222329; border: 1px solid #222329; box-shadow: 0 8px 20px 0 rgba(28, 30, 35, 0.1);}
+.black:hover{background-color: #494a4f; border: 1px solid #494a4f; color: #fdfdfd;}
+.black.disabled{background-color: #bcbcbc; box-shadow: none;}
+.black.pressed{background-color: #212228;color: #d7d7d8; border: 1px solid #212228;}
+.black:active{background-color: #212228;color: #d7d7d8; border: 1px solid #212228;}
+
+
+
+
+/*
+// Для сниппетов
+
+ .post__published {
+    display: flex;
+    }
+
+    .post__time,
+    .post__date {
+    margin-right: 7px;
+    }
+
+ &__arrow-holder{ 
+    display: flex; 
+    position: relative; 
+    width: auto; 
+    padding-right: 12px; 
+    text-align: right;
+    }
+
+    &__icon-arrow-up{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    background-color: transparent;
+    }
+
+
+    @mixin ellipsis (
+    text-overflow: ellipsis !important;
+    overflow-x: hidden !important;
+    word-break: break-word;
+    }
+
+    
+  */  
